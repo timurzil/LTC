@@ -31,14 +31,17 @@ h1 = For1.height1.value;
 w1 = For1.weight1.value;
 s1 = For1.sex.value;
 
-if (isNaN(h1) || isNaN(w1) || s1 == "") 
+if (isNaN(h1) || isNaN(w1) || s1 == "" || (h1*w1 == 0)) 
 
 {
-    return 0;
+    return;
+}
+ else
+ {
+bmi(w1, h1, s1);
+return; 
 }
 
-bmi(w1, h1, s1);
-return;
 }
 
 
